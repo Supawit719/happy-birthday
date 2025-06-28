@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday To vivaa🎉</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(45deg, #ffe6e6, #ffb3d9, #ffffff);
+            background-size: 100% 100%;
+            animation: gradientBG 10s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto;
+            color: #ff69b4;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #ff69b4;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Container */
+        .container {
+            text-align: center;
+            position: relative;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .envelope-img {
+            width: 30vw;
+            max-width: 75%;
+            margin: 0 auto;
+            display: block;
+            margin-bottom: 10px;
+            animation: float 3s ease-in-out infinite, moveSideToSide 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes moveSideToSide {
+            0% {
+                transform: translateX(0) rotate(0deg);
+            }
+
+            25% {
+                transform: translateX(10px) rotate(5deg);
+            }
+
+            50% {
+                transform: translateX(0) rotate(0deg);
+            }
+
+            75% {
+                transform: translateX(-10px) rotate(-5deg);
+            }
+
+            100% {
+                transform: translateX(0) rotate(0deg);
+            }
+        }
+
+        .surprise-btn {
+            background: linear-gradient(135deg, #ff69b4, #ff99cc, #ffe6f3);
+            border: none;
+            padding: 0px, 0px;
+            font-size: 28px;
+            border-radius: 60px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5), 0 0 40px rgba(255, 105, 180, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .surprise-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 25px rgba(255, 105, 180, 0.5);
+        }
+
+        .surprise-btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            animation: btn-shine 3s infinite;
+        }
+
+        @keyframes btn-shine {
+            0% {
+                transform: rotate(45deg) translateX(-200%);
+            }
+
+            100% {
+                transform: rotate(45deg) translateX(200%);
+            }
+        }
+
+        .surprise-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 105, 180, 0.5), transparent 70%);
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Hidden Element */
+        .hidden {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .birthday-message {
+            background: linear-gradient(45deg, #b3fcff, #ffffff, #b3ffff);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite;
+            font-size: 2em;
+            text-shadow: 0 0 2px rgba(90, 142, 255, 0.8), 0 0 20px rgba(85, 123, 250, 0.6), 0 0 30px rgba(76, 139, 255, 0.4);
+            margin: 20px 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Hearts Animation */
+        .hearts span {
+            position: absolute;
+            font-size: 28px;
+            animation: heart-float 4s linear infinite;
+            color: #ff69b4;
+        }
+
+        @keyframes heart-float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Blessing with Photos Section */
+        .blessing-with-photos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Photo Gallery */
+        .photo-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 150px;
+        }
+
+        .photo-gallery img {
+            width: 180px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5), 0 0 40px rgba(255, 105, 180, 0.3);
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+            animation: moveSideToSide 2s ease-in-out infinite alternate;
+        }
+
+        .photo-gallery.left img {
+            transform: rotate(-5deg);
+        }
+
+        .photo-gallery.right img {
+            transform: rotate(5deg);
+        }
+
+        .photo-gallery img:hover {
+            transform: rotate(10deg) scale(1.05) translateY(-10px);
+            z-index: 10;
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.8), 0 0 50px rgba(255, 105, 180, 0.5);
+            animation: imageMove 0.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes imageMove {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Blessing Text */
+        .blessing {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1);
+            text-align: left;
+        }
+
+        .blessing p {
+            font-size: 1.2em;
+            color: #ff69b4;
+            line-height: 1.8;
+
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        footer p {
+            font-size: 1em;
+            color: #ff69b4;
+        }
+
+        /* สำหรับโหมดมือถือ */
+        @media (max-width: 768px) {
+
+            .blessing-with-photos {
+                flex-direction: column-reverse;
+                /* เรียงเป็นคอลัมน์ */
+            }
+
+            .photo-gallery-mobile {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .photo-gallery.left,
+            .photo-gallery.right {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .photo-gallery img {
+                width: 45%;
+                /* ปรับขนาดรูปภาพให้เล็กลง */
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+                transition: all 0.5s ease;
+                cursor: pointer;
+            }
+
+            .photo-gallery img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(255, 105, 180, 0.4);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Confetti Animation */
+        .confetti {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            animation: confetti-fall 4s linear infinite;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Sparkle Effect */
+        .sparkles {
+            position: fixed;
+            pointer-events: none;
+            animation: sparkle 1s infinite;
+        }
+
+        @keyframes sparkle {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* Pop-in Animation */
+        .animate-pop-in {
+            animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .center-btn-container {
+            padding: 20px 30px;
+            background-color: #ff5c8d;
+            border-radius: 50%;
+            font-size: 30px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .center-btn-container:hover {
+            transform: scale(1.1);
+        }
+
+        .btn-surprise {
+            font-size: 36px;
+            padding: 15px 30px;
+            background-color: #ffffff;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-surprise:hover {
+            background-color: #ff3366;
+            transform: scale(1.1);
+        }
+
+        .btn-surprise:focus {
+            outline: none;
+        }
+
+        .animate__rubberBand {
+            animation: rubberBand 1s ease-in-out;
+        }
+
+        @keyframes rubberBand {
+            0% {
+                transform: scale(1);
+            }
+
+            30% {
+                transform: scale(1.25) rotate(-10deg);
+            }
+
+            50% {
+                transform: scale(1) rotate(10deg);
+            }
+
+            70% {
+                transform: scale(1.25) rotate(-10deg);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* สไตล์สำหรับข้อความ popup */
+        .message-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .message-content {
+            background: #fff;
+            padding: 30px 50px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+            text-align: center;
+            position: relative;
+            animation: popIn 0.3s ease-out;
+        }
+
+        .message-text {
+            font-size: 1.5em;
+            color: #d6336c;
+            font-family: 'Arial Rounded MT Bold', sans-serif;
+            margin: 15px 0;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #333;
+            transition: transform 0.2s;
+        }
+
+        .close-btn:hover {
+            transform: scale(1.2);
+            color: #d6336c;
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* สไตล์พื้นฐานสำหรับไอคอน */
+        .music-icon,
+        .volume-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #ffb6c1;
+            /* สีชมพูอ่อน */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin: 10px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5), 0 0 40px rgba(255, 105, 180, 0.3);
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+            animation: moveSideToSide 2s ease-in-out infinite alternate;
+        }
+
+        /* สไตล์เมื่อ hover */
+        .music-icon:hover,
+        .volume-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* สไตล์ไอคอนเล่นเพลง (สามเหลี่ยม) */
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 25px solid #ffffff;
+            /* สีขาว */
+            margin-left: 5px;
+        }
+
+        /* สไตล์ไอคอนหยุดเพลง (สี่เหลี่ยม) */
+        .stop-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #ffffff;
+            /* สีขาว */
+        }
+
+        /* สไตล์ไอคอนเพิ่มเสียง */
+        .volume-up-icon {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 25px solid #ffffff;
+            /* สีขาว */
+            position: relative;
+        }
+
+        /* สไตล์ไอคอนลดเสียง */
+        .volume-down-icon {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 25px solid #ffffff;
+            /* สีขาว */
+            position: relative;
+        }
+
+        /* สไตล์ container สำหรับจัดวางปุ่ม */
+        .controls-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 300px;
+            /* ปรับขนาดตามต้องการ */
+            margin: 0 auto;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            /* Spacing between the icons */
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+    <button class="surprise-btn animate__animated animate__rubberBand" onclick="startSurprise()" translate="yes" style="transform: translate(0px, 200px);">
+        <img src="c:\Users\ADMIN\Downloads\หัวใจ (1).png" id="mailbox" alt="Envelope" class="envelope-img animate__animated animate__zoomIn">
+    </button>
+
+        <div class="hidden" id="surprise">
+            <div class="hearts animate__animated " id="hearts"></div>
+
+            <img src="c:\Users\ADMIN\Downloads\happy.jpg" alt="Envelope" class="envelope-img animate__animated animate__zoomIn">
+
+            <h1 class="birthday-message animate__animated animate__rubberBand ">
+                Happy Birthday To vivaa🎉
+            </h1>
+            <h1>🎇🎆✨🎉</h1>
+
+
+
+            <div class="hearts animate__animated " id="hearts"></div>
+
+            <div class="blessing-with-photos">
+                <div class="blessing">
+                    <p>สุขสันต์วันเกิดนะครับพี่วิวา อยากได้อะไรก็ขอให้ได้ แล้วก็ขอให้คนรอบตัวพี่วิวารักพี่วิวาให้มากๆ
+                        ไม่ว่าจะเป็น ป๊า ม๊า หรือเพื่อนๆของพี่วิวา ส่วนกัน ก็ขอให้พี่วิวาสมหวังในความรัก
+                       >สุขสันต์วันเกิดพี่วิวา 🎂🎉
+
+เผลอแป๊บเดียวพี่วิวาก็อายุ 21 ปีแล้ว เวลาผ่านไปไวมากจริง ๆ แต่สิ่งที่ไม่เคยเปลี่ยนเลยก็คือ พี่สาวคนนี้ยังเป็นคนเก่ง ใจดี และอบอุ่นเหมือนเดิมเสมอ
+
+วันเกิดปีนี้ ผมอยากให้พี่รู้ว่า ผมรู้สึกโชคดีมากที่ได้เกิดมาเป็นน้องของพี่ ไม่ว่าเราจะทะเลาะกันบ้างในบางที หรือแกล้งกันเล่นบ้างเป็นประจำ แต่พี่ก็ยังเป็นคนที่ผมเชื่อใจ และรู้ว่าพี่อยู่ตรงนี้เสมอเวลาเหนื่อยหรือท้อ พี่ไม่ใช่แค่พี่สาว แต่เป็นทั้งเพื่อน เป็นที่ปรึกษา เป็นแรงบันดาลใจ และเป็นอีกหนึ่งคนสำคัญในชีวิตของผม
+
+อายุ 21 ปี เป็นช่วงวัยที่น่าตื่นเต้นมาก เพราะเป็นช่วงที่โลกเริ่มเปิดกว้างมากขึ้น มีโอกาส มีความฝัน และเส้นทางที่เราจะได้เลือกเอง ผมขออวยพรให้พี่วิวาเจอแต่สิ่งดี ๆ ในทุกเส้นทางที่พี่เลือกเดิน ขอให้เจอคนที่จริงใจ เจอสิ่งที่ทำให้หัวใจพี่เต้นแรง และขอให้ความฝันของพี่ ค่อย ๆ กลายเป็นความจริงในทุก ๆ วัน
+
+ขอให้สุขภาพแข็งแรงทั้งกายและใจ
+ขอให้มีรอยยิ้มมากกว่าน้ำตา
+ขอให้ไม่ว่าจะเจอเรื่องดีหรือร้าย พี่ก็ยังเป็น "พี่วิวา" ที่สดใส มีพลัง และไม่ยอมแพ้เหมือนที่ผมรู้จักเสมอมา
+
+รักและเคารพพี่เสมอครับ
+                    </p>
+                </div>
+            </div>
+            <div class="photo-gallery">
+                <img src="c:\Users\ADMIN\Downloads\viva13.jpg" onclick="showMessage('พี่สาวชุดขาวน่ารักก')">
+                <img src="c:\Users\ADMIN\Downloads\viva1.jpg" onclick="showMessage('บันนี่เกิลสุดแซ่บ')">
+                <img src="c:\Users\ADMIN\Downloads\viva16.jpg" onclick="showMessage('พี่สาวชุดฟ้าสวยเวอร์')">
+                <img src="c:\Users\ADMIN\Downloads\viva18.jpg" onclick="showMessage('แป๊ปซี่น่ากิน แต่พี่น่ากินกว่าา')">
+                <img src="c:\Users\ADMIN\Downloads\viva4.png" onclick="showMessage('ชุดนี้ก็แซ่บเวอร์')">
+                <img src="c:\Users\ADMIN\Downloads\Birthday Photo 5.png" onclick="showMessage('ผีน่ากลัวแต่พี่น่ารักกก')">
+                <img src="c:\Users\ADMIN\Downloads\viva6.jpg" onclick="showMessage('แอร์สายการบินไหนอะน่ารักจังง')">
+                <img src="c:\Users\ADMIN\Downloads\viva11.jpg" onclick="showMessage('แก้มน้ารักจังงง')">
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="message-overlay animate__animated" id="messageOverlay">
+        <div class="message-content">
+            <span class="close-btn" onclick="closeMessage()">&times;</span>
+            <p class="message-text" id="messageText"></p>
+        </div>
+    </div>
+    <script>
+        const audio = document.getElementById('audio');
+        const playIcon = document.getElementById('playIcon');
+        let isPlaying = false;
+
+        // Array of audio files to play
+        const songs = [
+            "/static/music/One.mp3", // Song 1
+            "/static/music/Taylor.mp3", // Song 2 (Replace with actual path)
+            "/static/music/Blue.mp3" // Song 3 (Replace with actual path)
+        ];
+
+        let currentSongIndex = 0; // To track the current song
+
+        
+// ฟังก์ชันเล่น/หยุดเพลง
+        function togglePlay() {
+            if (isPlaying) {
+                audio.pause(); // หยุดเพลง
+                playIcon.style.borderLeft = '25px solid #ffffff'; // เปลี่ยนเป็นไอคอนเล่น
+                playIcon.style.borderTop = '15px solid transparent';
+                playIcon.style.borderBottom = '15px solid transparent';
+                playIcon.style.marginLeft = '5px';
+            } else {
+                audio.play(); // เล่นเพลง
+                playIcon.style.borderLeft = 'none';
+                playIcon.style.borderTop = 'none';
+                playIcon.style.borderBottom = 'none';
+                playIcon.style.width = '20px';
+                playIcon.style.height = '20px';
+                playIcon.style.backgroundColor = '#ffffff'; // เปลี่ยนเป็นไอคอนหยุด
+            }
+            isPlaying = !isPlaying;
+        }
+
+        // ฟังก์ชันเพิ่มเสียง
+        function increaseVolume() {
+            if (audio.volume < 1) {
+                audio.volume += 0.1; // เพิ่มเสียง 10%
+            }
+        }
+
+        // ฟังก์ชันลดเสียง
+        function decreaseVolume() {
+            if (audio.volume > 0) {
+                audio.volume -= 0.1; // ลดเสียง 10%
+            }
+        }
+
+        // เมื่อเพลงจบ ให้เล่นเพลงถัดไป
+        audio.addEventListener('ended', () => {
+            currentSongIndex++; // ไปยังเพลงถัดไป
+            if (currentSongIndex >= songs.length) {
+                currentSongIndex = 0; // รีเซ็ตไปเพลงแรกหากจบเพลงสุดท้าย
+            }
+            audio.src = songs[currentSongIndex]; // เปลี่ยนแหล่งที่มาของเพลง
+            audio.play(); // เล่นเพลงถัดไป
+        });
+
+        // เริ่มต้นเล่นเพลงแรกเมื่อโหลดหน้าเว็บ
+        window.onload = () => {
+            audio.src = songs[currentSongIndex]; // ตั้งค่าแหล่งที่มาของเพลงแรก
+        };
+
+        function showMessage(message) {
+            const overlay = document.getElementById('messageOverlay');
+            const messageText = document.getElementById('messageText');
+            messageText.innerHTML = message;
+            overlay.style.display = 'flex';
+        }
+
+        function closeMessage() {
+            var messageOverlay = document.getElementById("messageOverlay");
+            messageOverlay.classList.add("animate__fadeOut");
+            setTimeout(() => {
+                messageOverlay.style.display = 'none';
+                messageOverlay.classList.remove("animate__fadeOut");
+            }, 500);
+        }
+
+
+        // ปิด popup เมื่อคลิกนอกกล่องข้อความ
+        document.getElementById('messageOverlay').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeMessage();
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const messages = [
+                "ข้อความรูปภาพ 1",
+                "ข้อความรูปภาพ 2",
+                "ข้อความรูปภาพ 3",
+                "ข้อความรูปภาพ 4",
+                "ข้อความรูปภาพ 5",
+                "ข้อความรูปภาพ 6",
+                "ข้อความรูปภาพ 7",
+                "ข้อความรูปภาพ 8",
+                "ข้อความรูปภาพ 9",
+            ];
+
+            document.querySelectorAll('.photo-gallery img').forEach((img, index) => {
+                img.addEventListener('click', () => showMessage(messages[index]));
+            });
+        });
+
+        // เพิ่มการกดปุ่ม ESC เพื่อปิด
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMessage();
+        });
+
+        function startSurprise() {
+            document.querySelector('.surprise-btn').classList.add('hidden');
+            document.getElementById('surprise').classList.remove('hidden');
+            document.getElementById('mailbox').src = "/static/images/pngtree-love-letters-png-image_11489243.png"
+
+            // สร้างคอนเฟตติ
+            function createConfetti() {
+                const colors = ['#ff99cc', '#ff69b4', '#ffffff', '#ffe6f3'];
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+                document.body.appendChild(confetti);
+
+                setTimeout(() => confetti.remove(), 5000);
+            }
+
+            // สร้างหัวใจ
+            function createHeart() {
+                const heart = document.createElement('span');
+                const emojis = ['🩷', '❤️']; // รายการอิโมจิ
+                const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)]; // เลือกอิโมจิแบบสุ่ม
+                heart.innerHTML = randomEmoji; // ตั้งค่าอิโมจิที่สุ่มเลือก
+                heart.style.left = Math.random() * 100 + 'vw'; // การสุ่มตำแหน่งซ้าย
+                heart.style.animationDuration = Math.random() * 3 + 2 + 's'; // การสุ่มเวลาอนิเมชั่น
+                heart.style.fontSize = Math.random() * 20 + 24 + 'px'; // การสุ่มขนาดตัวอักษร
+                document.getElementById('hearts').appendChild(heart); // เพิ่มอิโมจิลงใน DOM
+
+                setTimeout(() => heart.remove(), 5000); // ลบอิโมจิหลังจาก 5 วินาที
+            }
+
+
+            // เพิ่มเอฟเฟกต์สปาร์คเกิลเมื่อคลิก
+            document.addEventListener('click', createSparkle);
+
+            // เพอนิเมชั่นแบบสเตปเตอร์ สำหรับรูปภาพและข้อความ
+            document.querySelectorAll('.photo-gallery img, .blessing').forEach((el, i) => {
+                setTimeout(() => {
+                    el.classList.add('animate-pop-in');
+                }, i * 200);
+            });
+
+            // เพอนิเมชั่นฉากหลังที่เปลี่ยนสีแบบต่อเนื่อง
+            let hue = 0;
+            setInterval(() => {
+                document.body.style.background = `linear-gradient(45deg, hsl(${hue}deg 100% 95%), hsl(${hue + 60}deg 100% 95%), hsl(${hue + 120}deg 100% 95%))`;
+                hue = (hue + 1) % 360;
+            }, 50);
+
+            // เริ่มสร้างคอนเฟตติและหัวใจ
+            setInterval(createConfetti, 150);
+            setInterval(createHeart, 250);
+        }
+
+        // ฟังก์ชันสร้างเอฟเฟกต์สปาร์คเกิล
+        function createSparkle(e) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkles';
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            sparkle.style.background = `radial-gradient(circle, #fff 20%, rgba(255,105,180,0.5) 70%, transparent 100%)`;
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 1000);
+        }
+        document.addEventListener('click', createSparkle);
+
+        function createSparkle(e) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkles';
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            sparkle.style.background = `radial-gradient(circle, #fff 20%, rgba(255,105,180,0.5) 70%, transparent 100%)`;
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 1000);
+        }
+    </script>
+</body>
+
+</html>
